@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proyectoParaActividad2;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +17,13 @@ namespace TPWinForm_equipo_22A
         {
             InitializeComponent();
         }
-    }
+
+		private void Form1_Load(object sender, EventArgs e)
+		{
+
+			
+			SQLDatos datos = new SQLDatos();
+			dgvArticulos.DataSource = datos.listar();
+	}
+	}
 }
