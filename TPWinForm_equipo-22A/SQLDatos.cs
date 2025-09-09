@@ -36,9 +36,13 @@ namespace proyectoParaActividad2
 					aux.Categoria = lector.GetInt32(5);
 
 					if (!lector.IsDBNull(6))
-						aux.Precio = Convert.ToDouble(lector.GetDecimal(6));
+					{
+						aux.Precio = lector.GetDecimal(6);
+					}
 					else
-						aux.Precio = 0; // O el valor que consideres adecuado para nulos
+					{
+						aux.Precio = 0;
+					}
 
 					lista.Add(aux);
 				}
