@@ -35,7 +35,6 @@ namespace proyectoParaActividad2
 					aux.Marca = lector.GetInt32(4);
 					aux.Categoria = lector.GetInt32(5);
 
-					// Manejo correcto del tipo money (decimal en C#)
 					if (!lector.IsDBNull(6))
 						aux.Precio = Convert.ToDouble(lector.GetDecimal(6));
 					else
